@@ -8,17 +8,19 @@ A modular and file-based Employee Management System built using Python, demonstr
 - CRUD Operations (Create, Read, Update, Delete)
 ---
 
-## 🚀 Features
+## ⚙️ Features
 
+| Feature | Description |
+|---|---|
+| ➕ Add Employee | Add new employee with ID, Name, Salary, Company |
+| 🗑️ Delete Employee | Delete employee record by ID |
+| ✏️ Update Employee | Update Salary and Company of existing employee |
+| 👁️ View Employee | View a single employee record by ID |
+| 📋 View All Employees | Display all stored employee records |
+| 🔍 Search Employee | Search and verify employee by ID |
+| ✅ Name Validation | Custom validation for employee and company names |
+| 🚨 Custom Exceptions | Handles zero length, spaces, and invalid name errors |
 
-- ✅ Add new employee records
-- ✅ Delete employee records
-- ✅ Update employee details
-- ✅ View single employee
-- ✅ View all employees
-- ✅ Search employee by ID
-- ✅ Name validation with custom exceptions
-- ✅ Prevent duplicate employee IDs
 ---
 
 ## 🛠️ Technologies Used
@@ -53,17 +55,87 @@ Employee-Management-System/
 ```
 ---
 
+## 🧩 Modules Overview
+
+### `EmployeeMainProject.py`
+- Entry point of the application
+- Uses `match-case` (Python 3.10+) for menu-driven control flow
+- Imports all modules and calls respective functions
+
+### `EmployeeMenu.py`
+- Contains `menu()` function
+- Displays the main menu to the user
+
+### `EmployeeAdd.py`
+- `is_unique(employee)` — checks if employee ID already exists
+- `add_employee()` — collects data, validates, and saves using `pickle`
+
+### `EmployeeDelete.py`
+- `delete_employee()` — finds and removes employee record by ID
+
+### `EmployeeUpdate.py`
+- `update_employee()` — updates Salary and Company of an employee
+
+### `EmployeeView.py`
+- `view_employee()` — displays a single employee's details
+- `view_all_employee()` — displays all employee records in table format
+
+### `EmployeeSearch.py`
+- `search_employee()` — searches for an employee by ID and confirms existence
+
+### `Emp&CompNameValidation/` (Package)
+- **`NameValidException.py`** — defines 3 custom exceptions:
+  - `ZeroNameLengthError` — raised when name is empty
+  - `SpaceError` — raised when name contains only spaces
+  - `InvalidNameError` — raised when name has numbers/symbols
+- **`NameValidateOperation.py`** — contains `name_validate()` function that
+  validates employee and company names using above exceptions
+
+---
+
+## 🗃️ Data Storage
+
+- Records are stored in **`Employee.info`** binary file
+- Uses Python's **`pickle`** module for serialization
+- Each record is stored as a **dictionary**:
+
+\`\`\`python
+{
+    "ID"     : 101,
+    "Name"   : "Rahul Kumar",
+    "Salary" : 50000.00,
+    "Company": "TechCorp"
+}
+\`\`\`
+
+---
+
 ## ▶️ How to Run
 
 
-1. Clone the repository:
-git clone https://github.com/Biswojit02/employee-management-system.git
+**1. Clone the repository**
+\`\`\`bash
+git clone https://github.com/Biswojit02/employee-information-system.git
+cd employee-information-system
+\`\`\`
 
-2. Navigate to the project folder:
-cd employee-management-system
+**2. Update the path in `EmployeeAdd.py` and `EmployeeUpdate.py`**
+\`\`\`python
+sys.path.append("your/local/path/to/Emp&CompNameValidation")
+\`\`\`
 
-3. Run the main file:
+**3. Run the main program**
+\`\`\`bash
 python EmployeeMainProject.py
+\`\`\`
+
+---
+
+## 📋 Requirements
+
+- Python **3.10+** (for `match-case` support)
+- No external libraries required
+- Uses only built-in modules: `pickle`, `sys`
 
 ---
 
@@ -116,8 +188,10 @@ Contributions are welcome! Feel free to fork this repo and submit a pull request
 
 ## 📜 License
 
-This project is open-source and available under the MIT License.
+This project is licensed under the **MIT License**.  
+Feel free to use, modify, and distribute.
 
 ---
+
 
 ⭐ If you like this project, don't forget to star the repository!
