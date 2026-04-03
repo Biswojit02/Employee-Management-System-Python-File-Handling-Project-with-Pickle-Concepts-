@@ -48,7 +48,7 @@ Employee-Management-System/
 ├── EmployeeSearch.py             # Search employee
 ├── EmployeeMainFile.py        # Main entry point
 │
-└── EmpNameValidation/            # Validation package
+└── NameValidation/            # Validation package
     ├── NameValidException.py
     └── NameValidateOperation.py
 
