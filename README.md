@@ -46,7 +46,7 @@ Employee-Management-System/
 ├── EmployeeUpdate.py             # Update employee
 ├── EmployeeView.py               # View employee(s)
 ├── EmployeeSearch.py             # Search employee
-├── EmployeeMainProject.py        # Main entry point
+├── EmployeeMainFile.py        # Main entry point
 │
 └── EmpNameValidation/            # Validation package
     ├── NameValidException.py
@@ -57,7 +57,7 @@ Employee-Management-System/
 
 ## 🧩 Modules Overview
 
-### `EmployeeMainProject.py`
+### `EmployeeMainFile.py`
 - Entry point of the application
 - Uses `match-case` (Python 3.10+) for menu-driven control flow
 - Imports all modules and calls respective functions
@@ -126,7 +126,7 @@ sys.path.append("your/local/path/to/Emp&CompNameValidation")
 
 **3. Run the main program**
 \`\`\`bash
-python EmployeeMainProject.py
+python EmployeeMainFile.py
 \`\`\`
 
 ---
