@@ -1,5 +1,7 @@
 /*
 =====================================================================================================
+                             Employee Menu Module: Key features
+=====================================================================================================
 
   Displays a structured menu interface for navigating different employee operations in the system.
 
