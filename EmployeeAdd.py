@@ -1,5 +1,7 @@
 /*
 ===================================================================================
+                        Add Employee Module: Key features
+===================================================================================
 
       1. Adds new employee records using file handling (pickle)
       2. Ensures unique Employee ID using is_unique() validation
