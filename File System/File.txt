@@ -1,0 +1,32 @@
+  =>  File System 
+  =============================================================           
+
+1. EmployeeMenu.py <-------------File Name and Module Name......
+	menu()
+
+2. Emp&CompNameValidation <---Folder Name and Package Name......
+
+       i- NameValidException.py <--File Name and Module Name.....
+                ZeroNameLengthError, SpaceError, InvalidNameError
+
+      ii- NameValidateOperation.py <--File Name and Module Name..
+                name_validate()
+
+3. EmployeeAdd.py <--------------File Name and Module Name......
+        is_unique()
+      	add_employee()
+
+4. EmployeeDelete.py <-----------File Name and Module Name......
+	  delete_employee()
+
+5. EmployeeUpdate.py <-----------File Name and Module Name......
+	  update_employee()
+
+6. EmployeeView.py <-------------File Name and Module Name......
+    	view_employee()
+	    view_all_employee()
+
+7. EmployeeSearch.py <-----------File Name and Module Name......
+	  search_employee()
+
+8. EmployeeMainProject.py <-------------------Main Program......
